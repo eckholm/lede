@@ -58,6 +58,14 @@ jobs:
         run: |
           ./scripts/feeds update -a
           ./scripts/feeds install -a
+          cd package
+          git clone https://github.com/jerrykuku/luci-theme-argon
+          git clone https://github.com/happyzhang1995/openwrt-adguardhome
+          git clone https://github.com/happyzhang1995/luci-app-adguardhome
+          git clone https://github.com/tano-systems/luci-app-tn-shellinabox
+          git clone https://github.com/tty228/luci-app-serverchan
+          git clone https://github.com/Ameykyl/luci-app-koolproxyR
+          ls -lrt
 
       - name: Costom configure file
         run: |
